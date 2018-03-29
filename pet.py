@@ -5,30 +5,56 @@ class Pet:
         self.x = 0
         self.y = 0
         self.direction = 0
+        self.is_alive = True
 
     def eat(self):
-        print("Nom Nom Nom...")
+        if self.is_alive:
+            print(self.name + ": ''Nom Nom Nom...''")
+        else:
+            print("Ded Bois don't eat.")
+        
 
     def sleep(self):
-        print("zzzzzzzzzzzzzz...")
+        if self.is_alive:
+            print(self.name + ": ''zzzzzzzzzzzzzz...''")
+        else:
+            print(self.name + " is already gettign that GOOOOOD sleep. ;)")
 
     def play(self):
-        print("Yipee!")
+        if self.is_alive:
+            print(self.name + ": ''Yipee!''")
+        else:
+            print(self.name + " is playing in heaven.")
 
     def growl(self):
-        print("GRRRRrrr!!!")
+        if self.is_alive:
+            print(self.name + ": ''GRRRRrrr!!!''")
+        else:
+            print("Ded Bois don't Bark....")
 
     def love(self):
-        print("peeper purrr purrr")
+        if self.is_alive:
+            print(self.name + ": ''peeper purrr purrr''")
+        else:
+            print("You should have loved " + self.name + " while they were alive.") 
 
     def poop(self):
-        print("PPPRRRT..... HEEEEWWWWWWEEEERRRUUUUUM...!")
+        if self.is_alive:
+            print(self.name + ": ''PPPRRRT..... HEEEEWWWWWWEEEERRRUUUUUM...!''")
+        else:
+            print("At least you don't have to clean up the... unpleasent mess....")
 
     def wimper(self):
-        print("Heerrm Ruuoom")
+        if self.is_alive:
+            print(self.name + ": ''Heerrm Ruuoom''")
+        else:
+            print("At least they can't cry in the after life.")
 
     def tickle(self):
-        print("teeheehee, HAHAHA!")
+        if self.is_alive:  
+            print(self.name + ": ''teeheehee, HAHAHA!''")
+        else:
+            print("There are no tickles in the afterlife.")
 
         
 
@@ -59,7 +85,20 @@ class Pet:
                " [x=" + str(self.x) + \
                ", y=" + str(self.y) + \
                ", d=" + str(self.direction) + "]"
-    
+
+                  
+    def kill(self, other):
+        print(self.name + " kills " + other.name + "!")
+        other.is_alive = False
+
+
+    def dance(self, other):
+        if self.is_alive and other.is_alive:
+            print(self.name + " invited " + other.name + " to dance.")
+        else:
+            print("Can't dance with the ded.")
+
+        
     
 pet1 = Pet("Manuela")
 pet2 = Pet("Blato")
