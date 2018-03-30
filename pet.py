@@ -97,6 +97,67 @@ class Pet:
             print(self.name + " invited " + other.name + " to dance.")
         else:
             print("Can't dance with the ded.")
+''' health bar
+#Draw Bar
+import pygame
+
+def SingleColorBar(surface,color,x,y,value,maxvalue):
+    xx=0
+    for hp in range(value):
+        pygame.draw.rect(surface, color, (x+xx,y,1,32), 0)
+        xx+= value/100'''
+
+'''pet stats'''
+ticks = 0
+while not done:
+
+    def pet1_hunger():
+    def pet1_thirst():
+    def pet1_happiness():
+    def pet1_stress():
+    def pet1_potty():
+    def pet1_hygiene():
+
+
+pet2_hunger = 100
+pet2_thirst = 100
+pet2_happiness = 100
+pet2_stress = 0
+pet2_potty = 0
+pet2_hygiene = 100
+
+
+pet3_hunger = 100
+pet3_thirst = 100
+pet3_happiness = 100
+pet3_stress = 0
+pet3_potty = 0
+pet3_hygiene = 100
+
+
+pet4_hunger = 100
+pet4_thirst = 100
+pet4_happiness = 100w
+pet4_stress = 0
+pet4_potty = 0
+pet4_hygiene = 100
+
+
+pet5_hunger = 100
+pet5_thirst = 100
+pet5_happiness = 100
+pet5_stress = 0
+pet5_potty = 0
+pet5_hygiene = 100
+
+
+
+pet6_hunger = 100
+pet6_thirst = 100
+pet6_happiness = 100
+pet6_stress = 0
+pet6_potty = 0
+pet6_hygiene = 100
 
         
     
