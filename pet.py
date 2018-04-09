@@ -6,10 +6,18 @@ class Pet:
         self.y = 0
         self.direction = 0
         self.is_alive = True
+        self.hunger = 100
+        self.thirst = 100
+        self.hygine = 100
+        self.energy = 100
+        
 
     def eat(self):
         if self.is_alive:
             print(self.name + ": ''Nom Nom Nom...''")
+            self.hunger += 15
+            self.energy -= 5
+            print(self.name + "hunger: " + str(self.hunger) + " energy: " + str(self.energy))
         else:
             print("Ded Bois don't eat.")
         
@@ -17,24 +25,33 @@ class Pet:
     def sleep(self):
         if self.is_alive:
             print(self.name + ": ''zzzzzzzzzzzzzz...''")
+            self.energy += 15
+            self.hunger -= 10
+            print(self.name + "energy: " + str(self.energy) + " Hunger: " + str(self.hunger))
         else:
             print(self.name + " is already gettign that GOOOOOD sleep. ;)")
 
     def play(self):
         if self.is_alive:
             print(self.name + ": ''Yipee!''")
+            self.energy -= 10
+            self.hunger -= 20
+            print(self.name + "energy: " + str(self.energy) + " Hunger: " + str(self.hunger))
         else:
             print(self.name + " is playing in heaven.")
 
     def growl(self):
         if self.is_alive:
             print(self.name + ": ''GRRRRrrr!!!''")
+            
         else:
             print("Ded Bois don't Bark....")
 
     def love(self):
         if self.is_alive:
+            self.energy -= 35
             print(self.name + ": ''peeper purrr purrr''")
+            print(self.name + " Hunger: " + str(self.hunger))
         else:
             print("You should have loved " + self.name + " while they were alive.") 
 
@@ -109,57 +126,7 @@ def SingleColorBar(surface,color,x,y,value,maxvalue):
 
 '''pet stats'''
 ticks = 0
-while not done:
 
-    def pet1_hunger():
-    def pet1_thirst():
-    def pet1_happiness():
-    def pet1_stress():
-    def pet1_potty():
-    def pet1_hygiene():
-
-
-pet2_hunger = 100
-pet2_thirst = 100
-pet2_happiness = 100
-pet2_stress = 0
-pet2_potty = 0
-pet2_hygiene = 100
-
-
-pet3_hunger = 100
-pet3_thirst = 100
-pet3_happiness = 100
-pet3_stress = 0
-pet3_potty = 0
-pet3_hygiene = 100
-
-
-pet4_hunger = 100
-pet4_thirst = 100
-pet4_happiness = 100w
-pet4_stress = 0
-pet4_potty = 0
-pet4_hygiene = 100
-
-
-pet5_hunger = 100
-pet5_thirst = 100
-pet5_happiness = 100
-pet5_stress = 0
-pet5_potty = 0
-pet5_hygiene = 100
-
-
-
-pet6_hunger = 100
-pet6_thirst = 100
-pet6_happiness = 100
-pet6_stress = 0
-pet6_potty = 0
-pet6_hygiene = 100
-
-        
     
 pet1 = Pet("Manuela")
 pet2 = Pet("Blato")
